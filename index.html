@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Geografia</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background: linear-gradient(to right, #f4926c, #f0c272, #84cc16);
+        overflow-y: scroll; /* Enable vertical scrolling */
+        }
+
+        .container {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh; /* Ensures content fills viewport height */
+        }
+      
+        .header {
+        background-color: #333;
+        color: white;
+        padding: 1em;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 120px; /* Consistent header height */
+        }
+      
+        .header h1 {
+        font-size: 3em; /* Adjusted font size for better scaling */
+        margin: 0;
+        }
+      
+        .header span {
+        font-weight: bold;
+        font-size: 1.5em; /* Adjusted font size for better scaling */
+        }
+      
+        .section {
+        min-height: 800px; /* Set minimum height to 500px */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 2em; /* Consistent padding */
+        text-align: center;
+        background: linear-gradient(to right, #f4926c, #f0c272, #84cc16);        
+        margin-bottom: 2em; /* Spacing between sections */
+        opacity: 0; /* Initial opacity for animation */
+        transition: opacity 0.5s ease-in-out; /* Smooth transition */
+        margin-top: 0.5em; /* Adjust spacing as needed */
+        padding-top: 0;
+        }
+      
+        .section.in-view {
+        opacity: 1; /* Sections become visible on scroll */
+        }
+      
+        .section h1 {
+        font-size: 3em;
+        margin-bottom: 0.5em;
+        flex: 0; /* Allow text to grow within available space */
+        }
+
+      
+        .section p {
+        font-size: 1.5em;
+        margin-top: 0;
+        text-align: justify;
+        }
+      
+        .section img {
+        width: 45%; /* Responsive image sizing */
+        object-fit: cover; /* Maintain aspect ratio */
+        align-self: center;
+        }
+
+        .section#section3 {
+        flex-direction: row;
+        padding: 3;
+        margin: 1
+        }
+
+        .section#section2 img {
+        width: 100%; /* Responsive image sizing */
+        object-fit: cover; /* Maintain aspect ratio */
+        align-self: center;
+        }
+
+        .section#section3 img {
+        width: 45%; /* Responsive image sizing */
+        object-fit: cover; /* Maintain aspect ratio */
+        justify-self: flex-end;
+        }
+
+        .section#section3 p {
+        font-size: 1.5em;
+        margin-top: 0;
+        flex-direction: column;
+        border: 1px solid black;
+        }
+
+
+        .section#section1 {
+        /* No flexbox needed */
+        display: block;
+        }
+
+        .section#section1:after {
+        content: "";
+        display: table;
+        clear: both;
+        }
+
+        .section#section1 > div {
+        float: right; /* Move the div containing text to the right */
+        width: 25%; /* Set width to match half the section */
+        height: 500px;
+        font-size: 1.30em;
+        }
+      
+        footer {
+        background-color: #333;
+        color: white;
+        padding: 1em;
+        text-align: center;
+        }
+      
+        @media only screen and (max-width: 768px) {
+        .section h1 {
+            font-size: 1.5em; /* Adjust font size for smaller screens */
+        }
+        .section p {
+            font-size: 0.8em; /* Adjust font size for smaller screens */
+        }
+        }
+
+        .text-box {
+        background-color: #fff; /* Set background color */
+        border: 4px solid #000000; /* Add a border */
+        padding: 1em; /* Add padding */
+        margin: 0.5em 2em; /* Add margins for spacing */
+        }
+
+    </style>
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1><span>GEOGRAFIA</span></h1>
+      <div class="Stany">
+        Stany Zjednoczone - potęga gospodarcza świata
+      </div>
+    </header>
+    <section class="section" id="section1">
+      <h1>Położenie, Ukształtowanie Powierzchni i Zaludnienie</h1>
+      <div class="text-box">
+        <p>Powierzchnia: 9,5mln km².</p>
+        <p>Ludność i Gęstość zaludnienia: 323,2mln, 34,5 os./km² (2019).</p>
+        <p>PKB: ok. 65 tysięcy na osobę (2019).</p>
+        <p>Stolica: Waszyngton.</p>
+        <p>Język urzędowy: angielski.</p>
+        <p>Waluta: dolar amerykański (USD)</p>
+      </div>
+      <p>Stany Zjednoczone Ameryki (USA) znajdują się na środkowej częsci Ameryki Północnej.</p>
+      <p>Mają południkowy układ rzeźby terenu.</p>
+      <p>Stany zajmują trzecie miejsce pod względem liczby mieszkańców.</p>
+      <p>Nierównomierne rozmieszczenie ludności.</p>
+      <img src="amerima.jpg" alt="Image 1">
+    </section>
+
+    <section class="section" id="section2">
+      <h1>Największa gospodarka na świecie</h1>
+      <img src="gyatt.jpg" alt="Image 2">
+    </section>
+
+    <section class="section" id="section3">
+      <h1>Rozwój Przemysłu</h1>
+      <p>Przemysł rozwinął się w XIX wieku.</p>
+      <p>Przemysł obecnie jest bardzo nowoczesny.</p>
+      <p>Czołowe miejsce w wydobyciu m. in. węgla kamiennego i brunatnego.</p>
+      <p>Przemysł zaawansowanych technologii.</p>
+      <p>Pierwszy na świecie ośrodek high-tech: Dolina Krzemowa.</p>
+      <p>W Dolinie Krzemowej swe siedziby mają znane firmy: Apple, eBay, Facebook, Google, Intel.</p>
+      <img src="UwU.jpg" alt="Image 3" height="800">
+    </section>
+
+    <section class="section" id="section4">
+      <h1>Usługi</h1>
+      <p>Najważniejszą rolę odgrywają: Usługi telekomunikacyjne, edukacyjne, naukowo-badawcze i finansowe.</p>
+      <p>Istotny wpływ na rozwój gospodarki na także transport.</p>
+      <img src="SigmaOhioRizzler222.jpg" alt="Image 4">
+    </section>
+
+    <section class="section" id="section5">
+      <h1>Rolnictwo</h1>
+      <p>Sprzyjające gleby i klimat.</p>
+      <p>Średnia wielkość farm wynosi 180ha</p>
+      <p>Zróżnicowanie przestrzenne produkcji rolnej</p>
+      <img src="AraAra.jpg" alt="Image 5">
+    </section>
+
+    <section class="section" id="section6">
+        <h1>Marnotractwo Żywności</h1>
+        <p>Duża produkcja żywności</p>
+        <p>Przez łatwy dostęp do żywności oraz jej niskie ceny dużym problemem jest marnowanie żywności.</p>
+        <p>Każdego roku marnuje się około 60mln t żywności wanrtej około 160mld USD.</p>
+        <img src="Femboys.jpg" alt="Image 6">
+      </section>
+  
+      <footer class="footer">
+        <p>&copy; 2024 Emolianos. Wszelkie prawa zastrzeżone.</p>
+      </footer>
+    </div>
+  
+    <script>
+      const sections = document.querySelectorAll('.section');
+  
+      window.addEventListener('scroll', () => {
+        sections.forEach(section => {
+          const distanceToTop = section.getBoundingClientRect().top;
+          const windowHeight = window.innerHeight;
+  
+          if (distanceToTop >= 0 && distanceToTop < windowHeight) {
+            section.classList.add('in-view');
+          } else {
+            section.classList.remove('in-view');
+          }
+        });
+      });
+    </script>
+  </body>
+  </html>
